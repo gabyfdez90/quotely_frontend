@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="App">
-        <GeneralButton buttonType={'secondary'}>Back</GeneralButton>
+        <GeneralButton buttonType="secundary" text="Back" />
     </div>
   )
 }

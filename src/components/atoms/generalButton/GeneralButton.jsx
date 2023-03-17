@@ -5,7 +5,8 @@ import classNames from 'classnames';
 
 function GeneralButton({buttonType, text}) {
   const bgColor = buttonType === 'primary' ? 'bg-darkGreen' : 'bg-brown';
-  const combinedClasses = classNames('px-4 py-2 rounded white', bgColor)
+  const hover = buttonType === 'primary' ? 'hover:bg-darkerGreen' : 'hover:bg-darkBrown'
+  const combinedClasses = classNames('px-4 py-2 rounded white', bgColor, hover)
   
     return (
     <Button className={combinedClasses}>{text}

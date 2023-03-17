@@ -12,7 +12,13 @@ module.exports = {
       mustard: "#ffc482",
       green: "#70a9a1",
       brown: "#99621e",
+      darkBrown: "#5C3B12",
       darkGreen: "#2c5530",
+      darkerGreen: "#224226",
+    },
+    fontFamily: {
+      sans: ["Open Sans", "Helvetica", "Arial", "sans-serif"],
+      average: ["Average Sans", "Helvetica", "Arial", "sans-serif"],
     },
     extend: {},
   },
