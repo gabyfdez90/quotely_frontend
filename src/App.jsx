@@ -1,5 +1,5 @@
 import './App.css'
-import SearchBar from './components/atoms/searchBar/searchBar';
+import SmallCard  from './components/molecules/smallCard/smallCard';
 import './index.css'
 import Layout from "./components/layout/Layout";
 import { BrowserRouter } from "react-router-dom";
@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 export function App() {
   return (
     <BrowserRouter>
-      <SearchBar />
+      <SmallCard title={"Los besos en el Pan"} text={"Hay que ser muy valiente para pedir ayuda, ¿sabes? Pero hay que ser todavía más valiente para aceptarla."}/>
       <Layout>
         {
           //Routes
