@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 export function App() {
   return (
     <BrowserRouter>
-      <SmallCard title={"Los besos en el Pan"} text={"Hay que ser muy valiente para pedir ayuda, ¿sabes? Pero hay que ser todavía más valiente para aceptarla."}/>
+      <SmallCard title={"El coronel no tiene quien le escriba"} text={"Un hombre solo tiene derecho de mirar a otro hacia abajo cuando tiene que ayudarlo a levantarse."}/>
       <Layout>
         {
           //Routes
