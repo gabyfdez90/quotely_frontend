@@ -1,10 +1,10 @@
 import './App.css'
-import NavBar from './components/molecules/navBar/NavBar'
+import   NavBar  from './components/molecules/navBar/Navbar'
 import './index.css'
 import Layout from "./components/layout/Layout";
 import { BrowserRouter } from "react-router-dom";
 
-function App() {
+export function App() {
   return (
     <BrowserRouter>
       <NavBar />
