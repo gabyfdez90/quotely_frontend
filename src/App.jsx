@@ -1,15 +1,20 @@
-import { useState } from 'react'
 import './App.css'
-import GeneralButton from './components/atoms/generalButton/GeneralButton'
+import NavBar from './components/molecules/navBar/NavBar'
+import './index.css'
+import Layout from "./components/layout/Layout";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-        <GeneralButton buttonType="secundary" text="Back" />
-    </div>
-  )
+    <BrowserRouter>
+      <NavBar />
+      <Layout>
+        {
+          //Routes
+        }
+      </Layout>
+    </BrowserRouter>
+  );
 }
 
 export default App
