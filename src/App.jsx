@@ -1,5 +1,5 @@
 import './App.css'
-import SearchBar from './components/atoms/searchBar/SearchBar';
+import SearchBar from './components/atoms/searchBar/searchBar';
 import './index.css'
 import Layout from "./components/layout/Layout";
 import { BrowserRouter } from "react-router-dom";
