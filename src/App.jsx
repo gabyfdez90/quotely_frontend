@@ -1,16 +1,18 @@
 import './App.css'
 import './index.css'
 import Layout from "./components/layout/Layout";
-import { BrowserRouter } from "react-router-dom";
-import DetailsCard from './components/molecules/detailsCard/DetailsCard';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from '../src/pages/home/HomePage';
 
 export function App() {
   return (
     <BrowserRouter>
-      <Layout>
-        {
-          //Routes
-        }
+      <Layout children=
+      {
+        <Routes>
+        <Route path="/" element={<HomePage />} />
+        </Routes>
+      }>
       </Layout>
     </BrowserRouter>
   );
