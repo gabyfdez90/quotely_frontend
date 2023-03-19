@@ -4,6 +4,7 @@ import Layout from "./components/layout/Layout";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from '../src/pages/home/HomePage';
 import CollectionPage from '../src/pages/collection/CollectionPage';
+import GenrePage from '../src/pages/genre/GenrePage';
 
 export function App() {
 
@@ -14,6 +15,7 @@ export function App() {
         <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/collection" element={<CollectionPage />} />
+        <Route path="/genre" element={<GenrePage />} />
         </Routes>
       }>
       </Layout>

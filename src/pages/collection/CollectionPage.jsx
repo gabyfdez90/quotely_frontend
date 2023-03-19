@@ -1,10 +1,11 @@
 import React from 'react';
 import { useEffect, useState } from "react";
 import GeneralButton from '../../components/atoms/generalButton/GeneralButton';
-import SearchBar from '../../components/atoms/searchBar/searchBar';
 import { Table } from 'flowbite-react';
 import { TableRow } from 'flowbite-react/lib/esm/components/Table/TableRow';
 import { TableBody } from 'flowbite-react/lib/esm/components/Table/TableBody';
+import SearchCollection from '../../components/atoms/searchCollection/SearchCollection';
+
 
 function CollectionPage() {
     
@@ -27,7 +28,7 @@ function CollectionPage() {
             <h2 style={{fontSize: '2rem'}}>Your quotes</h2>
             <div className='flex justify-end gap-5'>
                 <GeneralButton buttonType={'primary'} text={'Add quote'} />
-                <SearchBar />
+                <SearchCollection />
             </div>
         </div>
             <Table >
