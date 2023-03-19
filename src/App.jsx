@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from '../src/pages/home/HomePage';
 import CollectionPage from '../src/pages/collection/CollectionPage';
 import GenrePage from '../src/pages/genre/GenrePage';
+import FormPage from './pages/form/formPage';
 
 export function App() {
 
@@ -16,6 +17,7 @@ export function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/collection" element={<CollectionPage />} />
         <Route path="/genre" element={<GenrePage />} />
+        <Route path="/add" element={<FormPage />} />
         </Routes>
       }>
       </Layout>
