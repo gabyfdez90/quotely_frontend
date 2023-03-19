@@ -11,7 +11,7 @@ function NavBar() {
   }
 
   return (
-    <div className="flex flex-col w-100 h-20">
+    <div className="flex flex-col w-100 h-20 lg:ml-20 lg:pl-10 mb-5">
         <div className="flex items-center flex-shrink-0">
           <div className="flex items-center">
             <HiOutlineMenuAlt1  onClick={toggleDrawer}  id="drawer-toggle" className="h-40 w-20 sm:text-base"/>
