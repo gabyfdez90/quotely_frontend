@@ -5,7 +5,6 @@ import SearchBar from '../../components/atoms/searchBar/searchBar';
 import { Table } from 'flowbite-react';
 import { TableRow } from 'flowbite-react/lib/esm/components/Table/TableRow';
 import { TableBody } from 'flowbite-react/lib/esm/components/Table/TableBody';
-import '../collection/collectionPage.css';
 
 function CollectionPage() {
     
