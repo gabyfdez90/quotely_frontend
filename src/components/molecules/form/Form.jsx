@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { Label, TextInput, Textarea } from 'flowbite-react';
 import GeneralButton from '../../atoms/generalButton/GeneralButton';
+import { useNavigate } from 'react-router-dom';
 
 function Form() {
   const [quoteText, setQuoteText] = useState('');
@@ -11,6 +12,7 @@ function Form() {
   const [year, setYear] = useState(0);
   const [authorProfession, setAuthorProfession] = useState('');
   const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
   
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -45,6 +47,7 @@ function Form() {
   const handleButtonClick = (event) => {
     event.preventDefault();
     handleSubmit(event);
+    navigate("/collection");
   };
   
   return (

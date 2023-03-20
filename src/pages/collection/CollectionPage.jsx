@@ -29,13 +29,16 @@ function CollectionPage() {
         console.log({quotes});
     }, []);
 
+    const handleAddButtonClick = () => {
+        navigate("/add");
+      };
 
   return (
     <div className='flex flex-col gap-5'>
         <div className='flex justify-between overflow-hidden'>
             <h2 style={{fontSize: '2rem'}}>Your quotes</h2>
             <div className='flex justify-end gap-5'>
-                <GeneralButton buttonType={'primary'} text={'Add quote'} />
+                <GeneralButton buttonType={'primary'} text={'Add quote'} onClick={handleAddButtonClick}/>
                 <SearchCollection />
             </div>
         </div>
