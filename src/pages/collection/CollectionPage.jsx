@@ -13,11 +13,11 @@ function CollectionPage() {
     const [ quotes, setQuotes ] = useState();
     const apiURL = 'http://127.0.0.1:8000/api/quotes';
     
-        const navigate = useNavigate();
+    const navigate = useNavigate();
         
-        function showDetails(id) {
-          navigate(`song-details/${id}`);
-        }
+    function showDetails(id) {
+        navigate(`song-details/${id}`);
+    }
 
     useEffect(() => {
         const fetchData = async () => {

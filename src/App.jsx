@@ -7,6 +7,7 @@ import CollectionPage from '../src/pages/collection/CollectionPage';
 import GenrePage from '../src/pages/genre/GenrePage';
 import FormPage from './pages/form/formPage';
 import SongDetailsPage from './pages/songDetails/SongDetailsPage';
+import EditPage from './pages/edit/EditPage';
 
 export function App() {
 
@@ -15,11 +16,12 @@ export function App() {
       <Layout children=
       {
         <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/collection" element={<CollectionPage />} />
-        <Route path="/genre" element={<GenrePage />} />
-        <Route path="/add" element={<FormPage />} />
-        <Route path="/song-details/:id" element={<SongDetailsPage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/collection" element={<CollectionPage />} />
+          <Route path="/genre" element={<GenrePage />} />
+          <Route path="/add" element={<FormPage />} />
+          <Route path="collection/song-details/:id" element={<SongDetailsPage />} />
+          <Route path="edit/:id" element={<EditPage />} />
         </Routes>
       }>
       </Layout>

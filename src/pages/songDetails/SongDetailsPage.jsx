@@ -18,6 +18,14 @@ function SongDetailsPage() {
         fetchData();
     }, []);
 
+    function showUpdate() {
+        navigate(`edit/`);
+    }
+
+    function showDelete() {
+        navigate(`delete/`);
+    }
+    
     if (!quote) {
         return <div>Loading...</div>;
       }

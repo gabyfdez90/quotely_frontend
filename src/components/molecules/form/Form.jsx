@@ -11,7 +11,7 @@ function Form() {
   const [year, setYear] = useState(0);
   const [authorProfession, setAuthorProfession] = useState('');
   const [showModal, setShowModal] = useState(false);
-
+  
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -24,23 +24,23 @@ function Form() {
   formData.append('author_profession', authorProfession);
   console.log(formData)
 
-  const response = await fetch('http://127.0.0.1:8000/api/quote', {
-      method: 'POST',
-      body: formData,
-  });
+    const response = await fetch('http://127.0.0.1:8000/api/quote', {
+        method: 'POST',
+        body: formData,
+    });
 
-    if (response.ok) {
-      setShowModal(true);
-      setQuoteText('');
-      setAuthor('');
-      setBook('');
-      setGenre('');
-      setYear(0);
-      setAuthorProfession('');
-    } else {
-      console.error('Failed to register quote');
-    }
-  };
+      if (response.ok) {
+        setShowModal(true);
+        setQuoteText('');
+        setAuthor('');
+        setBook('');
+        setGenre('');
+        setYear(0);
+        setAuthorProfession('');
+      } else {
+        console.error('Failed to register quote');
+      }
+  }
 
   const handleButtonClick = (event) => {
     event.preventDefault();
@@ -53,7 +53,7 @@ function Form() {
         <div className="mb-6 block">
         <Label style={{fontSize : '2.5rem', fontFamily: 'Open Sans', color: 'navy', fontWeight: 'bold'}}
           htmlFor="comment"
-          value="New Quote"
+          value="Add quote"
         />
       </div>
       <Textarea className='mb-6 bg-maingreen'
