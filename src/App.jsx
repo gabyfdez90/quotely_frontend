@@ -6,6 +6,7 @@ import HomePage from '../src/pages/home/HomePage';
 import CollectionPage from '../src/pages/collection/CollectionPage';
 import GenrePage from '../src/pages/genre/GenrePage';
 import FormPage from './pages/form/formPage';
+import SongDetailsPage from './pages/songDetails/SongDetailsPage';
 
 export function App() {
 
@@ -18,6 +19,7 @@ export function App() {
         <Route path="/collection" element={<CollectionPage />} />
         <Route path="/genre" element={<GenrePage />} />
         <Route path="/add" element={<FormPage />} />
+        <Route path="/song-details/:id" element={<SongDetailsPage />} />
         </Routes>
       }>
       </Layout>

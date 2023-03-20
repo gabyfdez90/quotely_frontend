@@ -5,12 +5,19 @@ import { Table } from 'flowbite-react';
 import { TableRow } from 'flowbite-react/lib/esm/components/Table/TableRow';
 import { TableBody } from 'flowbite-react/lib/esm/components/Table/TableBody';
 import SearchCollection from '../../components/atoms/searchCollection/SearchCollection';
+import {useNavigate} from 'react-router-dom';
 
 
 function CollectionPage() {
     
     const [ quotes, setQuotes ] = useState();
     const apiURL = 'http://127.0.0.1:8000/api/quotes';
+    
+        const navigate = useNavigate();
+        
+        function showDetails(id) {
+          navigate(`song-details/${id}`);
+        }
 
     useEffect(() => {
         const fetchData = async () => {
@@ -21,6 +28,7 @@ function CollectionPage() {
         fetchData();
         console.log({quotes});
     }, []);
+
 
   return (
     <div className='flex flex-col gap-5'>
@@ -46,7 +54,7 @@ function CollectionPage() {
                         Genre
                     </Table.HeadCell>
                     <Table.HeadCell>
-                        Updated
+                        Details
                     </Table.HeadCell>
                 </Table.Head>
                 <TableBody>
@@ -57,7 +65,10 @@ function CollectionPage() {
                             <Table.Cell>{quote.author?.name}</Table.Cell>
                             <Table.Cell>{quote.book?.name}</Table.Cell>
                             <Table.Cell>{quote.genre?.name}</Table.Cell>
-                            <Table.Cell>{quote.updated_at}</Table.Cell>
+                            <Table.Cell>
+                                <GeneralButton buttonType={'primary'} text={'Details'} onClick={() => showDetails(quote.id)}
+                                />
+                            </Table.Cell>
                         </TableRow>
                     )
                 }
