@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { Label, TextInput, Textarea } from 'flowbite-react';
 import GeneralButton from '../../components/atoms/generalButton/GeneralButton';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 function EditPage() {
     const [quoteText, setQuoteText] = useState('');
@@ -13,11 +13,12 @@ function EditPage() {
     const [authorProfession, setAuthorProfession] = useState('');
     const [showModal, setShowModal] = useState(false);
     const [postId, setPostId] = useState(null);
+    const navigate = useNavigate();
     
     const { id }  = useParams();
     console.log(id)
     
-    const handleSubmit = async (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
       
         const formData = new FormData();
@@ -31,28 +32,18 @@ function EditPage() {
       
         const requestOptions = {
             method: 'PUT',
-            content: "application/json",
             body: formData
         };
         
         fetch(`http://127.0.0.1:8000/api/quote/${id}`, requestOptions)
     .then(response => {
         if (response.ok) {
-            return response.json();
+            navigate("/collection");
         } else {
             throw new Error('Failed to update quote');
         }
     })
-/*     .then(data => {
-        setShowModal(true);
-        setQuoteText('');
-        setAuthor('');
-        setBook('');
-        setGenre('');
-        setYear(0);
-        setAuthorProfession('');
-        setPostId({ postId: id });
-    }) */
+
     .catch(error => {
         console.error(error);
     }); 

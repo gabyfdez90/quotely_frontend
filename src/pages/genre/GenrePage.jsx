@@ -1,35 +1,30 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import genreImg from '../../assets/img/genre.svg';
 import SearchCategory from '../../components/atoms/searchCategory/SearchCategory';
 import SmallCard from '../../components/molecules/smallCard/SmallCard'
 
 function GenrePage() {
-  const [searchResult, setSearchResults] = useState([]);
-  const [searchGenres, setSearchGenres] = useState("");
-  const apiUrl = `http://127.0.0.1:8000/api/quotes`
+  const [quotes, setQuotes] = useState([]);
 
-  const handleSearch = (genreId) => {
-    fetch(apiUrl).then((response) => response.json()).then((data)=>{
-        const filteredQuotes = data.filter((quote) => quote.genre_ID === genreId);
-        setSearchResults(filteredQuotes);
-    })
-    .catch((error) =>{console.error('Error fetching quotes', error);
-    });
-    };
+  const handleSearch = (data) => {
+    setQuotes(data);
+  };
   
     return (
     <div className='flex'>
         <div className="flex flex-col gap-4 align-center">
-            <SearchCategory text={"Type a genre ID number"} onSearch={handleSearch} />
+        <SearchCategory text={"Type a genre name"} onSearch={handleSearch} />
             <img className='w-1/2' src={genreImg} alt="Genre Graphic" />
+            <h1>Genre</h1>
         </div>
         <div className='flex flex-col gap-5'>
-        {searchResult.map((quote) => (
+        {quotes.map((quote) => (
                    <SmallCard
                    key={quote.id}
-                   title = {quote.title}
-                   text = {quote.text}
+                   title={quote.title}
+                   text={quote.text}
+                   url={`/collection/song-details/${quote.id}`}
                />
       ))}
  

@@ -1,16 +1,16 @@
 import React, {useState} from 'react';
 
-function SearchCategory({text, onSearch}) {
-    const [searchTerm, setSearchTerm] = useState("");
-    const apiURL = `http://localhost:8000/api/genres`;
 
+function SearchCategory({ text, onSearch }) {
+    const [searchTerm, setSearchTerm] = useState('');
+  
     const handleSearch = async (e) => {
-        e.preventDefault();
-        const response = await fetch(apiURL);
-        const data = await response.json();
-        onSearch(data);
+      e.preventDefault();
+      const apiUrl = `http://localhost:8000/api/genres/${encodeURIComponent(searchTerm)}`;
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+      onSearch(data);
     };
-
   
     return (
     <div>
