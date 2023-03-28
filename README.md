@@ -33,8 +33,8 @@ It is structured in four principal views
 ![Screenshot 2023-03-20 at 06-30-25 Vite React](https://user-images.githubusercontent.com/117080861/226258560-8eeb3fe0-835b-4374-a046-f647bf900034.png)
 
 
-* Genre, it will filter all the quotes by genre.
-* Author, it will filter all the quotes by author.
+* Genre, it filters all the quotes by genre.
+* Author, it filters all the quotes by author.
 
 ## Installation
 
