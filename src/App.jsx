@@ -9,6 +9,7 @@ import FormPage from './pages/form/formPage';
 import SongDetailsPage from './pages/songDetails/SongDetailsPage';
 import EditPage from './pages/edit/EditPage';
 import DeletePage from './pages/delete/DeletePage';
+import AuthorPage from './pages/author/AuthorPage';
 
 export function App() {
 
@@ -20,6 +21,7 @@ export function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/collection" element={<CollectionPage />} />
           <Route path="/genre" element={<GenrePage />} />
+          <Route path="/authors" element={<AuthorPage />} />
           <Route path="/add" element={<FormPage />} />
           <Route path="collection/song-details/:id" element={<SongDetailsPage />} />
           <Route path="edit/:id" element={<EditPage />} />

@@ -37,9 +37,11 @@ function NavBar() {
               <p>Genre</p>
             </div>
             </Link>
+            <Link to="/authors">
             <div className= "p-4 mt-4 font-sans bg-mustard flex-center align-center" typeof='button'>
               <p>Author</p>
             </div>
+            </Link>
           </div>
           </div>
           </div>
