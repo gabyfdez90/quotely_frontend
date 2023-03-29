@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import genreImg from '../../assets/img/genre.svg';
+import genreImg from '../../assets/img/genrePage.svg';
 import SearchCategory from '../../components/atoms/searchCategory/SearchCategory';
 import SmallCard from '../../components/molecules/smallCard/SmallCard';
 import { Label } from 'flowbite-react';
