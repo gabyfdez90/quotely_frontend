@@ -8,7 +8,7 @@ function HomePage() {
   return (
     <div className='flex flex-col p-10 lg:flex-row gap-5'>
       <div className='flex flex-col justify-center  text-left text-2xl text-navy'>
-        <h2 className='mb-10'>Don't trust your mind. <br />
+        <h2 className='mb-10 leading-relaxed'>Don't trust your mind. <br />
           Store quotes:<br /> 
           they are lighter than books.</h2>
           <Link to="./collection">
