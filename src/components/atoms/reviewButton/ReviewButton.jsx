@@ -6,10 +6,8 @@ import { useEffect, useState } from 'react';
 function ReviewButton({book}) {
     const [ review, setReview ] = useState(null);
     const apiKey = import.meta.env.VITE_NYT_API_KEY;
-    console.log(apiKey)
     const titleLower = book.toLowerCase()
     const titleFormatted = titleLower.replace(/ /g , '%20')
-    console.log(titleFormatted)
     const apiURL = `https://api.nytimes.com/svc/books/v3/reviews.json?api-key=${apiKey}&title=${titleFormatted}`;
 
 
@@ -17,7 +15,6 @@ function ReviewButton({book}) {
     useEffect(() => {
         const fetchData = async () => {
             const response = await fetch(apiURL).then(res => res.json());
-            console.log(response)
             setReview(response);
         }
         fetchData();
