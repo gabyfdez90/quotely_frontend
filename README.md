@@ -19,6 +19,10 @@ This React app is tailored designed to complement a [Laravel backend project] (h
 
 ![Screenshot 2023-03-20 at 06-29-16 Vite React](https://user-images.githubusercontent.com/117080861/226256332-f741edf5-089a-4921-a3e9-c472ab16b4d8.png)
 
+### Bonus feature
+
+You can access a review of the book published at one of the most important American media outlets, just by clicking a button from this app!
+
 ## Views
 
 It is structured in four principal views
