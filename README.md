@@ -30,7 +30,7 @@ It is structured in four principal views
 * Edit Quote, a very similar form to update an existent registry.
 * Delete, to confirm the deletion of a quote.
 
-![Screenshot 2023-03-20 at 06-30-25 Vite React](https://user-images.githubusercontent.com/117080861/226258560-8eeb3fe0-835b-4374-a046-f647bf900034.png)
+![Screenshot 2023-06-04 at 01-59-52 Vite React](https://github.com/gabyfdez90/quotely_frontend/assets/117080861/42b60d3d-5395-4a62-81c5-bebe43d78792)
 
 
 * Genre, it filters all the quotes by genre.
